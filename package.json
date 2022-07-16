@@ -1,0 +1,24 @@
+{
+    "name": "prconnect",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "commonjs",
+    "scripts": {
+        "postinstall": "patch-package"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "bitcore-lib": "^8.25.28",
+        "bs58": "^5.0.0",
+        "google-protobuf": "^3.20.1",
+        "hex-to-array-buffer": "^2.0.0",
+        "multihashes": "^4.0.3",
+        "patch-package": "^6.4.7",
+        "protobufjs": "^6.11.3",
+        "sync-fetch": "^0.4.1"
+    }
+}

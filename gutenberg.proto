@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+message Record {
+
+  // cid
+  string cid = 1;
+
+  // Title
+  string title = 3;
+
+  // Book number
+  uint32 ebook_no = 4;
+
+}
+
+/*
+message Magnet {
+
+  // magnet
+  string magnet = 1;
+
+}
+*/
