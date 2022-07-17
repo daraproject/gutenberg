@@ -67,8 +67,8 @@ proto.Record.prototype.toObject = function(opt_includeInstance) {
 proto.Record.toObject = function(includeInstance, msg) {
   var f, obj = {
     cid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    title: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    ebookNo: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    title: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    ebookNo: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -109,11 +109,11 @@ proto.Record.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setCid(value);
       break;
-    case 3:
+    case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.setTitle(value);
       break;
-    case 4:
+    case 3:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setEbookNo(value);
       break;
@@ -156,14 +156,14 @@ proto.Record.serializeBinaryToWriter = function(message, writer) {
   f = message.getTitle();
   if (f.length > 0) {
     writer.writeString(
-      3,
+      2,
       f
     );
   }
   f = message.getEbookNo();
   if (f !== 0) {
     writer.writeUint32(
-      4,
+      3,
       f
     );
   }
@@ -189,11 +189,11 @@ proto.Record.prototype.setCid = function(value) {
 
 
 /**
- * optional string title = 3;
+ * optional string title = 2;
  * @return {string}
  */
 proto.Record.prototype.getTitle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -202,16 +202,16 @@ proto.Record.prototype.getTitle = function() {
  * @return {!proto.Record} returns this
  */
 proto.Record.prototype.setTitle = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional uint32 ebook_no = 4;
+ * optional uint32 ebook_no = 3;
  * @return {number}
  */
 proto.Record.prototype.getEbookNo = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -220,7 +220,7 @@ proto.Record.prototype.getEbookNo = function() {
  * @return {!proto.Record} returns this
  */
 proto.Record.prototype.setEbookNo = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
