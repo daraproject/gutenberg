@@ -8,7 +8,7 @@ const { toProtobuf } = require("./protobuffstuff");
 //
 // P2TH address
 //
-const p2th_value = Buffer.from("just a simple gutenberg test_5"); // we are making the private from this random string
+const p2th_value = Buffer.from("just a simple gutenberg test_6"); // we are making the private from this random string
 const p2th_hash = bitcore.crypto.Hash.sha256(p2th_value);
 const p2th_bn = bitcore.crypto.BN.fromBuffer(p2th_hash);
 const p2th_privateKey = new bitcore.PrivateKey(p2th_bn);
