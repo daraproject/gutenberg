@@ -62,7 +62,7 @@ function makeRecTxn(payload, amount) {
 //    vout[0] 0 value, pays to P2TH
 //    vout[1] is OP_RETURN with protobuf payload
 //    vout[2] change
-function makeMagnetTxn(p2th, payload, amount) {
+function makeMagnetTxn(payload, amount) {
 
     /// #1 
     // fetch utxos for an address, select best utoxs for the task
