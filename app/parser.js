@@ -2,7 +2,7 @@ const { readProtobuf } = require("./protobuffstuff");
 const { listTransactions, getRawTransaction, bitcore } = require("./coin");
 const { base58_to_hex } = require("./hash");
 
-const p2th_addr = "mrgDc5cUE8PgJephvvUGXSswHY7PRM2HrE";
+const p2th_addr = "mkcjE2gjJs8bq6aVSrsk7Rm9FueK8nRTn9";
 
 function getTxnVout(all_txns) {
     /*
