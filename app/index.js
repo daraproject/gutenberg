@@ -83,7 +83,7 @@ function makeMagnetTxn(payload, amount) {
     return transaction.toString();
 };
 
-var payload = toProtobuf("Qmcuez47NPzE3FTofGqAxqbXNeB9u6Y1h7f2EuTBJwmxji", "Hathercourt", 43168);
+var payload = toProtobuf("QmbCXJJZxNtLNtm9rn9i7PXbwtawpFvZU7Nx6CPxi77miR", "Hathercourt", 43168);
 console.log(payload)
 var txn = makeRecTxn(payload, 0.01);
 
