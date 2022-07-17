@@ -1,6 +1,7 @@
 const { readProtobuf } = require("./protobuffstuff");
 const { listTransactions, getRawTransaction, bitcore } = require("./coin");
 const { base58_to_hex } = require("./hash");
+const binascii = require("binascii");
 
 const p2th_addr = "mkcjE2gjJs8bq6aVSrsk7Rm9FueK8nRTn9";
 
@@ -37,11 +38,18 @@ function parseVout(vouts) {
             break
         }
 
-        const msg = Uint8Array.from(Buffer.from(asm, 'hex'));
+        let unhex = binascii.unhexlify(asm);
+        const msg = Uint8Array.from(unhex);
+        console.log(readProtobuf(msg))
 
-        book_metadata.push(
-            readProtobuf(msg)
-        )
+        try {
+            book_metadata.push(
+                readProtobuf(msg)
+            )
+        }
+        catch(err) {
+            continue
+        }
     
     }
 
