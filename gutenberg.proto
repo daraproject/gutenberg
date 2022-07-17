@@ -6,10 +6,10 @@ message Record {
   string cid = 1;
 
   // Title
-  string title = 3;
+  string title = 2;
 
   // Book number
-  uint32 ebook_no = 4;
+  uint32 ebook_no = 3;
 
 }
 
